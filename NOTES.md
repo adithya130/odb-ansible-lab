@@ -40,3 +40,13 @@ ansible -m ansible.builtin.command -a "cat /tmp/ip.txt" all
 ```
 ansible-playbook --limit ODBTST public-ip.yml
 ```
+
+## Run Example Playbooks
+```
+ansible-playbook --limit azure_rm_linux example-loop.yml
+```
+
+## Extra variable call
+```
+ansible-playbook --limit azure_rm_linux example-loop.yml #-e @extra_vars/myvars.yml
+```
